@@ -13,9 +13,10 @@ namespace PSIUWeb.Controllers
             pacientRepository = _pacientRepo;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View( pacientRepository.GetPacients() );
         }
     }
 }

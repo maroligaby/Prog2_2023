@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using PSIUWeb.Data;
 using PSIUWeb.Data.EF;
 using PSIUWeb.Data.Interface;
@@ -8,18 +7,21 @@ using PSIUWeb.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(
+builder.Services.AddDbContext<AppDbContext>(options => 
+    options.UseSqlServer( 
         builder.Configuration.
-            GetConnectionString("PsiuContext")
-    )
+            GetConnectionString("PsiuContext") 
+    ) 
 );
 
-//Scoped services
-//Serviços que são registrados para serem criados a cada requisição HTTP
+//Scoped Services
+// Serviços que são registrados para serem criados
+// a cada requisição HTTP
 builder.Services.AddScoped<IPacientRepository, EFPacientRepository>();
 
-builder.Services.AddIdentity<AppUser, IdentityRole>(
+builder.Services.AddScoped<IPsicoRepository, EFPsicoRepository>();
+
+builder.Services.AddIdentity<AppUser, IdentityRole>( 
     options =>
     {
         options.User.RequireUniqueEmail = true;

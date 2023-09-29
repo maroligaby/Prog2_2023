@@ -1,11 +1,9 @@
-﻿
-using PSIUWeb.Models;
+﻿using PSIUWeb.Models;
 
 namespace PSIUWeb.Data.Interface
 {
     public interface IPacientRepository
-    {
-        
+    {        
         public Pacient? GetPacientById(int id);
 
         public IQueryable<Pacient>? GetPacients();
@@ -14,7 +12,6 @@ namespace PSIUWeb.Data.Interface
 
         public Pacient? Delete(int id);
 
-        public Pacient? Create (Pacient p);
-
+        public Pacient? Create(Pacient p);
     }
 }

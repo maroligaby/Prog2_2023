@@ -42,6 +42,31 @@ namespace PSIUWeb.Data
 
                 context.SaveChanges();
             }
+
+            if (!context.Psicos.Any())
+            {
+                context.Psicos.AddRange(
+                    new Psico
+                    {
+                        Name = "Mauricio",
+                        BirthDate = new DateTime(1984, 7, 5),
+                        Race = Race.Pardo,
+                        Crp = 18098765,
+                        Cep = 88998000
+                    },
+                    new Psico
+                    {
+                        Name = "Marcos",
+                        BirthDate = new DateTime(1987, 2, 28),
+                        Race = Race.Pardo,
+                        Crp = 12345678,
+                        Cep = 89670000
+                    }
+                );
+
+                context.SaveChanges();
+            }
+
         }
 
     }

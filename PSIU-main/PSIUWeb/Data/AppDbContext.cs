@@ -17,5 +17,10 @@ namespace PSIUWeb.Data
 
         public DbSet<Psico>? Psicos { get; set; }
 
+        public DbSet<Category>? Categories { get; set; }
+
+        public DbSet<Content>? Contents { get; set; }
+        public DbSet <ContentCategory>? ContentCategories { get; set; }
+
     }
 }

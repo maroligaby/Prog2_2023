@@ -29,3 +29,12 @@ tipos de relacionamento
 agregação: adiciona a mais (não obrigatoria)
 
 composição: vital (obrigatorio)
+
+
+
+
+
+
+git:
+copia de uma branch (git checkout -b nome_da_branch)
+transitar entre branchs (git checkout nome_branch)

@@ -17,3 +17,15 @@ Interface- Contrato da classe - permite maior flexibilidade ao configurar.
 injeção de dependecia 
 
 linq - language integrated query
+
+contract - public/private - define quem e em que nivel as outras classes podem acessar.
+	-Private - apenas a propria classe e as com hierarquia /classe pai/classe filho
+	-public - publico
+
+contrutor: mesmo nome da classe, metodo do tipo da classe em que está. Geralmente definido no primeiro paragrafo. Não tem retorno. 
+
+
+tipos de relacionamento
+agregação: adiciona a mais (não obrigatoria)
+
+composição: vital (obrigatorio)

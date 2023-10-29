@@ -25,6 +25,8 @@ namespace PSIUWeb.Models
         [Display(Name = "CEP")]
         public int Cep { get; set; }
 
+        public bool Liberado { get; set; }
+
         [Required(ErrorMessage = "Raça requerida.")]
         [Display(Name = "Raça")]
         public Race Race { get; set; }

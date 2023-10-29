@@ -52,7 +52,7 @@ namespace PSIUWeb.Data
                         BirthDate = new DateTime(1984, 7, 5),
                         Race = Race.Pardo,
                         Crp = 18098765,
-                        Cep = 88998000,
+                        Endereco = "rua x, bairro y",
                         Liberado = true
                     },
                     new Psico
@@ -61,7 +61,7 @@ namespace PSIUWeb.Data
                         BirthDate = new DateTime(1987, 2, 28),
                         Race = Race.Pardo,
                         Crp = 12345678,
-                        Cep = 89670000,
+                        Endereco = "rua z, bairro a",
                         Liberado = true
 
                     }

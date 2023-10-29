@@ -64,10 +64,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
-                        <label asp-for="Cep" class="control-label"></label>
-                        <input asp-for="Cep" class="form-control"
-                               placeholder="CEP" />
-                        <span asp-validation-for="Cep" class="text-danger"></span>
+                        <label asp-for="Endereco" class="control-label"></label>
+                        <input asp-for="Endereco" class="form-control"
+                               placeholder="Endereço" />
+                        <span asp-validation-for="Endereco" class="text-danger"></span>
                     </div>
                 </div>
             </div>
@@ -87,6 +87,16 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label asp-for="Liberado" class="control-label"></label>
+                        <input asp-for="Liberado" class="radio" />
+                    </div>
+                </div>
+            </div>
+
 
             <hr />
 

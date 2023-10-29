@@ -21,9 +21,9 @@ namespace PSIUWeb.Models
         [Display(Name = "CRP")]
         public int Crp { get; set; }
 
-        [Required(ErrorMessage = "CEP requerido.")]
-        [Display(Name = "CEP")]
-        public int Cep { get; set; }
+        [Required(ErrorMessage = "Endereco requerido.")]
+        [Display(Name = "Endereco")]
+        public string? Endereco { get; set; }
 
         public bool Liberado { get; set; }
 

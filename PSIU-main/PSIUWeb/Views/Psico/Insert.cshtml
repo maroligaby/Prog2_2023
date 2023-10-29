@@ -12,7 +12,7 @@
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item">
                         <a asp-action="Index"
-                            asp-controller="Psico">
+                           asp-controller="Psico">
                             Listagem
                         </a>
                     </li>
@@ -32,8 +32,8 @@
                 <div class="col-12">
                     <div class="form-group">
                         <label asp-for="Name" class="control-label"></label>
-                        <input asp-for="Name" class="form-control" 
-                            placeholder="Nome completo"/>
+                        <input asp-for="Name" class="form-control"
+                               placeholder="Nome completo" />
                         <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
                 </div>
@@ -64,38 +64,44 @@
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
-                        <label asp-for="Cep" class="control-label"></label>
-                        <input asp-for="Cep" class="form-control"
-                               placeholder="CEP" />
-                        <span asp-validation-for="Cep" class="text-danger"></span>
+                        <label asp-for="Endereco" class="control-label"></label>
+                        <input asp-for="Endereco" class="form-control"
+                               placeholder="Endereco" />
+                        <span asp-validation-for="Endereco" class="text-danger"></span>
                     </div>
                 </div>
             </div>
 
-
-           <!--
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
-                        <label asp-for="Liberado" class="control-label"></label>
-                        <select asp-for="Liberado" 
-                            asp-items="Html.GetEnumSelectList<Race>()"
-                            class="form-control">
+                        <label asp-for="Race" class="control-label"></label>
+                        <select asp-for="Race"
+                                asp-items="Html.GetEnumSelectList<Race>()"
+                                class="form-control">
                             <option selected="selected"
                                     value="">
-                                    Selecione a raça
+                                Selecione a raça
                             </option>
                         </select>
                     </div>
                 </div>
             </div>
-           --> 
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label asp-for="Liberado" class="control-label"></label>
+                        <input asp-for="Liberado" class="radio" />
+                        <span asp-validation-for="Liberado" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
 
             <hr />
 
             <div class="form-group">
-                <input type="submit" value="Atualizar" 
-                    class="btn btn-primary" />
+                <input type="submit" value="Atualizar"
+                       class="btn btn-primary" />
             </div>
 
         </form>

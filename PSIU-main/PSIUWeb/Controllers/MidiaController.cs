@@ -21,6 +21,23 @@ namespace PSIUWeb.Controllers
                 midiaRepository.GetMidias()
             );
         }
+
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            if (id <= 0 || id == null)
+                return NotFound();
+
+            Midia? m =
+                midiaRepository.GetMidiaById(id.Value);
+
+            if (m == null)
+                return NotFound();
+
+            return View(m);
+
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Midia midia)

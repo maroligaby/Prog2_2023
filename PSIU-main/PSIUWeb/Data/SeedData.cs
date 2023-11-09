@@ -70,6 +70,24 @@ namespace PSIUWeb.Data
                 context.SaveChanges();
             }
 
+            if (!context.Midias.Any())
+            {
+                context.Midias.AddRange(
+                    new Midia
+                    {
+                        Url= "teste",
+                        TipoMidia = "musica"
+                    },
+                    new Midia
+                    {
+                        Url = "teste2",
+                        TipoMidia = "musica" 
+                    }
+                );
+
+                context.SaveChanges();
+            }
+
         }
 
     }

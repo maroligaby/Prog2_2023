@@ -52,7 +52,7 @@ namespace PSIUWeb.Data
                         BirthDate = new DateTime(1984, 7, 5),
                         Race = Race.Pardo,
                         Crp = 18098765,
-                        Cep = 88998000,
+                        Endereco = "Rua Severino Paese",
                         Liberado = true
                     },
                     new Psico
@@ -61,9 +61,27 @@ namespace PSIUWeb.Data
                         BirthDate = new DateTime(1987, 2, 28),
                         Race = Race.Pardo,
                         Crp = 12345678,
-                        Cep = 89670000,
+                        Endereco = "Rua Severino Paese",
                         Liberado = true
 
+                    }
+                );
+
+                context.SaveChanges();
+            }
+
+            if (!context.Midias.Any())
+            {
+                context.Midias.AddRange(
+                    new Midia
+                    {
+                        Url = "teste",
+                        TypeMidia = TypeMidia.Imagem
+                    },
+                    new Midia
+                    {
+                        Url = "teste2",
+                        TypeMidia = TypeMidia.Música
                     }
                 );
 
